@@ -9,7 +9,7 @@ commands = [ "/home/ubuntu/firstscript.sh", "/home/ubuntu/secondscript.sh" ]
 for command in commands:
 	print ("Executing {}".format( command ))
 	stdin , stdout, stderr = c.exec_command(command)
-	print (stdout.read())
+	print (stdout.read().decode('ascii'))
 	print("Errors")
 	print (stderr.read())
 c.close()
